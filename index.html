@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Minecraft Live 2026</title>
-
+    <link rel="shortcut icon" href="PFP_400x400.jpg" type="image/png">
+    <meta charset="UTF-8">
+    <title>Minecraft Live 2026</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Minecraft-style font -->
   <link href="https://fonts.cdnfonts.com/css/minecraft-4" rel="stylesheet">
 
@@ -47,7 +48,7 @@
 
     header h1 {
       font-size: 1.8rem;
-      color: #55ff55;
+      color: #ffffff;
       text-shadow: 2px 2px #000;
     }
 
@@ -85,7 +86,8 @@
     }
 
     .subtitle {
-      color: #ccc;
+      color: #ffffff;
+      text-shadow: 2px 2px #000;
       margin-bottom: 40px;
       padding-top: 12%;
     }
@@ -162,6 +164,52 @@
       color: #aaa;
     }
 
+    @media (max-width: 768px) {
+    body {
+    overflow: auto;
+    background-image: url("Minecraft_Live_March_2026_Key_Art_Mobile.png");
+    background-attachment: scroll;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .main {
+        padding-top: 25%;
+    }
+
+    .main h2 {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        padding-top: 20px;
+        font-size: 0.9rem;
+    }
+
+    .countdown {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .time-box {
+        min-width: 70px;
+        padding: 15px;
+    }
+
+    .time-box div:first-child {
+        font-size: 1.5rem;
+    }
+
+    .cta button {
+        width: 80%;
+        max-width: 300px;
+    }
+    }
   </style>
 </head>
 
@@ -214,7 +262,7 @@
     const diff = eventDate - now;
 
     if (diff <= 0) {
-      document.querySelector(".main").innerHTML = "<h2>🎉 It's LIVE NOW!</h2>";
+      document.querySelector(".main").innerHTML = "<h2>It's LIVE NOW!</h2>";
       return;
     }
 
