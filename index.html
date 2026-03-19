@@ -19,13 +19,7 @@
       font-family: 'Minecraft', Arial, sans-serif;
       color: white;
       height: 100vh;
-      overflow: hidden;
-
-      /* Background like Minecraft Live */
-      background-image: url("Minecraft_Live_March_2026_Key_Art.jpg");
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-size: cover;
+      background-color: #44a1cf;
     }
 
     /* Dark overlay */
@@ -69,6 +63,9 @@
     }
 
     .main {
+      background-image: url("Minecraft_Live_March_2026_Key_Art.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
       position: relative;
       z-index: 2;
       flex: 1;
@@ -83,13 +80,14 @@
       font-size: 3rem;
       margin-bottom: 10px;
       text-shadow: 3px 3px #000;
+      padding-top: 5%;
     }
 
     .subtitle {
       color: #ffffff;
       text-shadow: 2px 2px #000;
       margin-bottom: 40px;
-      padding-top: 12%;
+      padding-top: 11.4%;
     }
 
     .countdown {
@@ -154,6 +152,10 @@
         inset 0 -2px 0 rgba(0,0,0,0.3),
         0 1px 0 #1f4d1a;
     }
+    
+    .border {
+        padding-top: 10%;
+    }
 
     footer {
       position: relative;
@@ -167,8 +169,6 @@
     @media (max-width: 768px) {
     body {
     overflow: auto;
-    background-image: url("Minecraft_Live_March_2026_Key_Art_Mobile.png");
-    background-attachment: scroll;
     }
 
     header {
@@ -179,6 +179,8 @@
 
     .main {
         padding-top: 25%;
+    background-image: url("Minecraft_Live_March_2026_Key_Art_Mobile.png");
+    background-attachment: scroll;
     }
 
     .main h2 {
@@ -209,6 +211,56 @@
         width: 80%;
         max-width: 300px;
     }
+
+      .news-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .news-title {
+        text-align: center;
+    }
+
+    .news-text h3 {
+        font-size: 1.6rem;
+    }
+    }
+
+    .news-section {
+    background: #171615;
+    padding: 80px 10%;
+    color: white;
+    }
+
+    .news-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-align: left;
+    }
+
+    .news-content {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    }
+
+    /* Image */
+    .news-image img {
+    width: 350px;
+    max-width: 100%;
+    display: block;
+    }
+
+    /* Text */
+    .news-text h3 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    }
+
+    .news-text p {
+    color: #ccc;
+    line-height: 1.6;
+    max-width: 500px;
     }
   </style>
 </head>
@@ -220,14 +272,14 @@
 <header>
   <h1>MINECRAFT LIVE</h1>
   <div class="nav">
-    <span>Home</span>
-    <span>News</span>
+    <span onclick="document.getElementById('main').scrollIntoView({behavior:'smooth'})">Home</span>
+    <span onclick="document.getElementById('news').scrollIntoView({behavior:'smooth'})">News</span>
   </div>
 </header>
 
-<div class="main">
+<div class="main" id="main">
   <h2>COUNTDOWN</h2>
-  <div class="subtitle">Starts March 21, 1:00 AM PT</div>
+  <div class="subtitle">‎ ‎ ‎ ‎ ‎ ‎ Starts March 21, 1:00 AM PT</div>
 
   <div class="countdown">
     <div class="time-box">
@@ -251,8 +303,152 @@
   <div class="cta">
     <button class="link-button" onclick="openSite()">Watch Live</button>
   </div>
+  <div class="border"></div>
 </div>
 
+<div class="news-section" id="news">
+  <h2 class="news-title">WHAT TO EXPECT:</h2>
+
+  <div class="news-content">
+    
+    <!-- Image Box -->
+    <div class="news-image">
+      <img src="news/mclive_news1.webp" alt="Minecraft Live March 21">
+    </div>
+
+    <!-- Text Content -->
+    <div class="news-text">
+      <h3>MINECRAFT LIVE IS ALMOST HERE!</h3>
+      <p>
+        Brace yourself for some big reveals! Tune into Minecraft LIVE on March 21 
+        for the scoop on game drops, behind-the-scenes secrets, awesome guests, 
+        and more exciting stuff to come. Hold onto your snacks because it's going 
+        to be a fun one! 
+      </p>
+      <p>-minecraft.net</p>
+    </div>
+
+  </div>
+  
+  <div class="border"></div>
+
+  <div class="news-content">
+    
+    <div class="news-image">
+      <img src="news/mclive_news2.webp" alt="Minecraft Live March 21">
+    </div>
+
+    <div class="news-text">
+      <h3>NEW GAME DROP</h3>
+      <p>
+        What this new game drop could be we don't know. It could be penguins, I've seen a few theories about that, or it could
+        the sculk dimension, idk.
+      </p>
+    </div>
+
+  </div>
+
+    <div class="border"></div>
+
+  <div class="news-content">
+    
+    <div class="news-image">
+      <img src="news/mclive_news3.webp" alt="Minecraft Live March 21">
+    </div>
+
+    <div class="news-text">
+      <h3>SOMETHING SUPER EXCITING</h3>
+      <p>
+        Vu Bui had said that there will be something super exciting that will be revealed at Minecraft Live, he mentioned a 
+        real life Minecraft thing. It could be the Merlin x Minecraft collab where they said there's a theme park about Minecraft.
+        Below is information about it.
+      </p>
+    </div>
+
+  </div>
+
+    <div class="border"></div>
+
+  <div class="news-content">
+    
+    <div class="news-image">
+      <img src="news/mclive_news5.webp" alt="Minecraft Live March 21">
+    </div>
+
+    <div class="news-text">
+      <h3>MERLIN x MINECRAFT</h3>
+      <p>
+        The collaboration was announced on November 19, 2024 by Merlin Entertainments. A trailer was even released, which you
+        can open by clicking the button below. Or the real life Minecraft thing could just be the Minecraft Experience, more 
+        information below.
+      </p>
+        <div class="cta">
+            <button class="link-button" onclick="openSiteMerlin()">Watch Trailer</button>
+        </div>
+    </div>
+
+  </div>
+
+    <div class="border"></div>
+
+  <div class="news-content">
+    
+    <div class="news-image">
+      <img src="news/mclive_news6.webp" alt="Minecraft Live March 21">
+    </div>
+
+    <div class="news-text">
+      <h3>Minecraft Experience: Villager Rescue</h3>
+      <p>
+        Minecraft's Twitter account had posted they would come to Chicago May 2026 so this could be the real life Minecraft thing
+        or the Merlin, only time will tell. Below is the tweet for you to see for yourself.
+      </p>
+        <div class="cta">
+            <button class="link-button" onclick="openSiteEXPirl()">Open Tweet</button>
+        </div>
+    </div>
+
+  </div>
+
+    <div class="border"></div>
+
+  <div class="news-content">
+    
+    <div class="news-image">
+      <img src="news/mclive_news4.webp" alt="Minecraft Live March 21">
+    </div>
+
+    <div class="news-text">
+      <h3>DEEP DIG</h3>
+      <p>
+        The deep dig aftershow is coming back once again. This time it once again has two Youtubers making an appearance as
+        part of the aftershow to play the new game drop. But instead of adding suspense, Minecraft just revealed who they are 
+        because why not I guess. The two Youtubers are hannahxxrose and blorg. 
+      </p>
+    </div>
+
+  </div>
+
+    <div class="border"></div>
+
+  <div class="news-content">
+    
+    <div class="news-image">
+      <img src="news/mclive_news7.jpg" alt="Minecraft Live March 21">
+    </div>
+
+    <div class="news-text">
+      <h3>DEEP DIG</h3>
+      <p>
+        The deep dig's two Youtubers is hannahxxrose and blorg. Here's the tweet revealing them.
+      </p>
+        <div class="cta">
+            <button class="link-button" onclick="openSiteYoutubers()">Open Tweet</button>
+        </div>
+    </div>
+
+  </div>
+</div>
 
 <script>
   const eventDate = new Date("2026-03-21T01:00:00-07:00").getTime();
@@ -282,6 +478,21 @@
 
   function openSite() {
     window.open("https://www.youtube.com/watch?v=Is5IswM87EQ", "_blank");
+
+    }
+
+  function openSiteMerlin() {
+    window.open("https://www.youtube.com/watch?v=tShQkO4m6Vs", "_blank");
+
+    }
+
+  function openSiteEXPirl() {
+    window.open("https://x.com/Minecraft/status/2033892208126886295", "_blank");
+
+    }
+
+  function openSiteYoutubers() {
+    window.open("https://x.com/Minecraft/status/2034299258594070852", "_blank");
 
     }
 </script>
